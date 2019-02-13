@@ -39,6 +39,11 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+app.get('/car-detail', (req, res) => {
+
+    res.render('car-detail');
+});
+
 
 app.listen(port, () => {
     console.log(`Escuchando desde el puerto ${port}`);
