@@ -34,6 +34,11 @@ app.get('/faq', (req, res) => {
     res.render('faq');
 });
 
+app.get('/login', (req, res) => {
+
+    res.render('login');
+});
+
 
 app.listen(port, () => {
     console.log(`Escuchando desde el puerto ${port}`);
