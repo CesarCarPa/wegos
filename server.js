@@ -5,25 +5,29 @@ const port = process.env.PORT || 3000;
 require('./hbs/helpers');
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/'));
 
 hbs.registerPartials(__dirname + '/views/partials/');
 
 app.set('view engine', 'hbs');
 
-
+//pagina principal
 app.get('/', (req, res) => {
-    // res.send('Hola mundo desde Server')
 
     res.render('home', {
-        nombre: 'César'
+        //nombre: 'César'
     });
 })
 
 app.get('/about', (req, res) => {
 
     res.render('about');
-})
+});
+
+app.get('/cars', (req, res) => {
+
+    res.render('cars');
+});
 
 
 app.listen(port, () => {
