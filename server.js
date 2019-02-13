@@ -19,14 +19,19 @@ app.get('/', (req, res) => {
     });
 })
 
-app.get('/about', (req, res) => {
+app.get('/contact', (req, res) => {
 
-    res.render('about');
+    res.render('contact');
 });
 
 app.get('/cars', (req, res) => {
 
     res.render('cars');
+});
+
+app.get('/faq', (req, res) => {
+
+    res.render('faq');
 });
 
 
